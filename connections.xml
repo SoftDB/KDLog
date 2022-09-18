@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connections>
+	<connect name="Alior" host="195.182.52.213" port="2040" sid="AML" user="kdprevent_installer" pass="kd4prevent"/>
+	<connect name="KDSTAGE" host="10.11.48.92" port="1521" sid="kdstage" user="kdprevent_installer" pass="kd4prevent"/>
+</connections>
