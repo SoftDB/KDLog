@@ -2,7 +2,7 @@ package com.softdb.kdlog.env;
 
 public class EnvTexts
 {
-    public final static String APP_VER = "2.0.0";
+    public final static String APP_VER = "2.0.1";
     public final static String APP_NAME = "KDLog";
     
     public final static String TITLE_ERROR_LOG = "ERROR_LOG (DR)";

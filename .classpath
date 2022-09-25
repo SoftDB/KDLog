@@ -8,5 +8,7 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Developer/Java/Library/bojava.jar"/>
 	<classpathentry kind="lib" path="C:/Developer/Java/Library/ojdbc8.jar"/>
+	<classpathentry kind="lib" path="C:/Developer/Java/Library/log4j-api-2.19.0.jar"/>
+	<classpathentry kind="lib" path="C:/Developer/Java/Library/log4j-core-2.19.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

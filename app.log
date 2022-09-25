@@ -1,0 +1,56 @@
+2022-09-24 11:22:36,732 FATAL c.s.k.a.App [AWT-EventQueue-0] fatal
+2022-09-24 11:22:36,733 ERROR c.s.k.a.App [AWT-EventQueue-0] error
+2022-09-24 11:22:36,733 WARN c.s.k.a.App [AWT-EventQueue-0] warn
+2022-09-24 11:22:36,733 INFO c.s.k.a.App [AWT-EventQueue-0] info
+2022-09-24 11:22:36,734 DEBUG c.s.k.a.App [AWT-EventQueue-0] debug
+2022-09-24 11:23:11,496 FATAL c.s.k.a.App [AWT-EventQueue-0] fatal
+2022-09-24 11:23:11,497 ERROR c.s.k.a.App [AWT-EventQueue-0] error
+2022-09-24 11:23:11,498 WARN c.s.k.a.App [AWT-EventQueue-0] warn
+2022-09-24 11:23:11,498 INFO c.s.k.a.App [AWT-EventQueue-0] info
+2022-09-24 11:23:11,498 DEBUG c.s.k.a.App [AWT-EventQueue-0] debug
+2022-09-24 11:25:23.963 FATAL com.softdb.kdlog.app.Config - fatal 2
+2022-09-24 11:25:23.967 ERROR com.softdb.kdlog.app.Config - error
+2022-09-24 11:25:24.196 FATAL com.softdb.kdlog.app.App - fatal
+2022-09-24 11:25:24.197 ERROR com.softdb.kdlog.app.App - error
+2022-09-24 11:25:24.197 WARN  com.softdb.kdlog.app.App - warn
+2022-09-24 11:25:24.197 INFO  com.softdb.kdlog.app.App - info
+2022-09-24 11:25:24.197 DEBUG com.softdb.kdlog.app.App - debug
+2022-09-24 20:56:38.755 FATAL com.softdb.kdlog.app.Config - fatal 2
+2022-09-24 20:56:38.759 ERROR com.softdb.kdlog.app.Config - error
+2022-09-24 20:56:39.130 FATAL com.softdb.kdlog.app.App - fatal
+2022-09-24 20:56:39.130 ERROR com.softdb.kdlog.app.App - error
+2022-09-24 20:56:39.130 WARN  com.softdb.kdlog.app.App - warn
+2022-09-24 20:56:39.131 INFO  com.softdb.kdlog.app.App - info
+2022-09-24 20:56:39.131 DEBUG com.softdb.kdlog.app.App - debug
+2022-09-24 20:56:43.005 ERROR com.softdb.bojava.db.Connect - null
+2022-09-24 20:57:25.279 ERROR com.softdb.bojava.db.Connect - IO Error: The Network Adapter could not establish the connection
+2022-09-24 21:36:44.258 FATAL com.softdb.kdlog.app.Config - fatal 2
+2022-09-24 21:36:44.261 ERROR com.softdb.kdlog.app.Config - error
+2022-09-24 21:36:44.491 FATAL com.softdb.kdlog.app.App - fatal
+2022-09-24 21:36:44.491 ERROR com.softdb.kdlog.app.App - error
+2022-09-24 21:36:44.491 WARN  com.softdb.kdlog.app.App - warn
+2022-09-24 21:36:44.491 INFO  com.softdb.kdlog.app.App - info
+2022-09-24 21:36:44.491 DEBUG com.softdb.kdlog.app.App - debug
+2022-09-24 22:02:15.291 FATAL com.softdb.kdlog.app.Config - fatal 2
+2022-09-24 22:02:15.295 ERROR com.softdb.kdlog.app.Config - error
+2022-09-24 22:02:15.536 FATAL com.softdb.kdlog.app.App - fatal
+2022-09-24 22:02:15.537 ERROR com.softdb.kdlog.app.App - error
+2022-09-24 22:02:15.537 WARN  com.softdb.kdlog.app.App - warn
+2022-09-24 22:02:15.537 INFO  com.softdb.kdlog.app.App - info
+2022-09-24 22:02:15.537 DEBUG com.softdb.kdlog.app.App - debug
+2022-09-24 22:03:03.644 FATAL com.softdb.kdlog.app.Config - fatal 2
+2022-09-24 22:03:03.648 ERROR com.softdb.kdlog.app.Config - error
+2022-09-24 22:03:03.878 FATAL com.softdb.kdlog.app.App - fatal
+2022-09-24 22:03:03.878 ERROR com.softdb.kdlog.app.App - error
+2022-09-24 22:03:03.878 WARN  com.softdb.kdlog.app.App - warn
+2022-09-24 22:03:03.878 INFO  com.softdb.kdlog.app.App - info
+2022-09-24 22:03:03.878 DEBUG com.softdb.kdlog.app.App - debug
+2022-09-24 22:03:49.599 ERROR com.softdb.bojava.db.Connect - IO Error: The Network Adapter could not establish the connection
+2022-09-24 22:08:25.365 FATAL com.softdb.kdlog.app.Config - fatal 2
+2022-09-24 22:08:25.368 ERROR com.softdb.kdlog.app.Config - error
+2022-09-24 22:08:25.608 FATAL com.softdb.kdlog.app.App - fatal
+2022-09-24 22:08:25.609 ERROR com.softdb.kdlog.app.App - error
+2022-09-24 22:08:25.609 WARN  com.softdb.kdlog.app.App - warn
+2022-09-24 22:08:25.609 INFO  com.softdb.kdlog.app.App - info
+2022-09-24 22:08:25.609 DEBUG com.softdb.kdlog.app.App - debug
+2022-09-24 22:09:10.602 ERROR com.softdb.bojava.db.Connect - IO Error: The Network Adapter could not establish the connection

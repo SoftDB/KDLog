@@ -1,0 +1,24 @@
+2022-09-24 22:10:53.630 FATAL com.softdb.kdlog.app.Config - fatal 2
+2022-09-24 22:10:53.634 ERROR com.softdb.kdlog.app.Config - error
+2022-09-24 22:10:53.861 FATAL com.softdb.kdlog.app.App - fatal
+2022-09-24 22:10:53.861 ERROR com.softdb.kdlog.app.App - error
+2022-09-24 22:10:53.862 WARN  com.softdb.kdlog.app.App - warn
+2022-09-24 22:10:53.862 INFO  com.softdb.kdlog.app.App - info
+2022-09-24 22:10:53.862 DEBUG com.softdb.kdlog.app.App - debug
+2022-09-24 22:10:57.292 INFO  com.softdb.kdlog.action.ChangeConnect - Alior connecting...
+2022-09-24 22:11:39.556 ERROR com.softdb.bojava.db.Connect - IO Error: The Network Adapter could not establish the connection
+2022-09-24 22:11:43.817 INFO  com.softdb.kdlog.action.ChangeConnect - Alior connecting abort.
+2022-09-24 22:19:29.989 INFO  com.softdb.kdlog.action.ChangeConnect - Alior connecting...
+2022-09-24 22:20:12.258 ERROR com.softdb.bojava.db.Connect - IO Error: The Network Adapter could not establish the connection
+2022-09-24 22:20:13.981 INFO  com.softdb.kdlog.action.ChangeConnect - Alior connecting abort.
+2022-09-24 22:21:23.686 INFO  com.softdb.kdlog.action.ChangeConnect - KDSTAGE connecting...
+2022-09-24 22:22:05.746 ERROR com.softdb.bojava.db.Connect - IO Error: The Network Adapter could not establish the connection
+2022-09-24 22:22:10.322 INFO  com.softdb.kdlog.action.ChangeConnect - KDSTAGE connecting abort.
+2022-09-24 22:39:24.805 INFO  com.softdb.kdlog.action.ChangeConnect - Alior connecting...
+2022-09-24 22:40:07.079 ERROR com.softdb.bojava.db.Connect - IO Error: The Network Adapter could not establish the connection
+2022-09-24 22:40:14.322 INFO  com.softdb.kdlog.action.ChangeConnect - Alior connecting abort.
+2022-09-25 21:19:14.203 INFO  com.softdb.kdlog.action.ChangeConnect - Alior connecting...
+2022-09-25 21:19:19.395 INFO  com.softdb.kdlog.action.ChangeConnect - Alior connected.
+2022-09-25 21:26:27.229 INFO  com.softdb.kdlog.action.ChangeConnect - Alior connecting...
+2022-09-25 21:26:32.504 INFO  com.softdb.kdlog.action.ChangeConnect - Alior connected.
+2022-09-25 21:26:40.652 INFO  com.softdb.kdlog.query.AbstractQuery - select SELECT PROCESS_ID,LOAD_PROCESS_ID,REQUEST_ID,JOB_TYPE,MSTR_STATE,START_DATE,FINISH_DATE,CURRENT_STATUS,EXIT_STATUS,FATAL_ERROR_MESSAGE,USER_NAME,DESCRIPTION,RUNMATCHING,RUNRULES FROM DR.LOG_JOB WHERE PROCESS_ID BETWEEN (SELECT MAX(PROCESS_ID) - 100 FROM DR.LOG_JOB) AND (SELECT max(PROCESS_ID) FROM DR.LOG_JOB)  ORDER BY PROCESS_ID DESC

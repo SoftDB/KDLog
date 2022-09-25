@@ -6,12 +6,19 @@ import java.awt.EventQueue;
 
 import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.config.Configurator;
+
 import com.softdb.kdlog.action.ExitApp;
 
 public class App
 {
     private static JFrame frame;
     private static JDesktopPane desktop;
+
+    private static final Logger logger = LogManager.getLogger(App.class);
 
     public static void main(String[] args)
     {
@@ -25,7 +32,7 @@ public class App
 		    App.frame.setVisible(true);
 		} catch (Exception e)
 		{
-		    e.printStackTrace();
+		    logger.fatal(e);
 		}
 	    }
 	});
@@ -33,6 +40,8 @@ public class App
 
     private void initialize()
     {
+	Configurator.initialize(null, "log4j2.xml");
+
 	frame = new JFrame("KDLog");
 	frame.setBounds(Config.getSizeMainFrame());
 	frame.setJMenuBar(MenuApp.getMenuBar());
@@ -73,4 +82,5 @@ public class App
     {
 	frame.getContentPane().setCursor(new Cursor(cursor));
     }
+
 }

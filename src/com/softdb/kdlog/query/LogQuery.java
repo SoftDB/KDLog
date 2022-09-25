@@ -1,6 +1,6 @@
 package com.softdb.kdlog.query;
 
-import com.softdb.kdlog.types.ModelTableQuery;
+import com.softdb.bojava.db.ModelTableQuery;
 import com.softdb.kdlog.types.FrameParams;
 import com.softdb.kdlog.types.QueryParams;
 
@@ -24,11 +24,4 @@ public class LogQuery extends AbstractQuery implements IQuery
 
 	return execute(sb.toString());
     }
-
-    @Override
-    public String getError()
-    {
-	return err;
-    }
-
 }

@@ -12,6 +12,7 @@ public class Connections
     public Connections(String name, String host, String port, String sid, String user, String pass) 
     {
 	super();
+	
 	this.name = name;
 	this.host = host;
 	this.port = port;

@@ -43,7 +43,7 @@ public class CustomColumnDialog
 	    panel.add(cb);
 	}
 
-	int res = JOptionPane.showConfirmDialog(App.getMainFrame(), panel, "Custom Where", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+	int res = JOptionPane.showConfirmDialog(App.getMainFrame(), panel, "Custom Columns", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
 	if (res == 1)
 	    cols = prevCols;
     }

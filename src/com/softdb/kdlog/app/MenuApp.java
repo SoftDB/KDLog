@@ -24,6 +24,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
+import com.softdb.kdlog.action.ChangeConnect;
 import com.softdb.kdlog.action.ExitApp;
 import com.softdb.kdlog.action.LogAction;
 import com.softdb.kdlog.action.SearchAction;
@@ -67,7 +68,7 @@ public class MenuApp extends MenuAbstract
     private static JMenuItem mWindowCascade;
 
     private static JButton btnExit;
-    private static JComboBox<Connections> cbConnections;
+    public static JComboBox<Connections> cbConnections;
 
     public static void init()
     {
@@ -77,9 +78,14 @@ public class MenuApp extends MenuAbstract
 	initMenu();
 	initToolBar();
 
-	mLog.setEnabled(false);
-	mSearch.setEnabled(false);
-	mWindow.setEnabled(false);
+	statusMenu(false);
+    }
+
+    public static void statusMenu(Boolean val)
+    {
+	MenuApp.mLog.setEnabled(val);
+	MenuApp.mSearch.setEnabled(val);
+	MenuApp.mWindow.setEnabled(val);
     }
 
     private static void initMenu()
@@ -217,21 +223,7 @@ public class MenuApp extends MenuAbstract
 	DefaultComboBoxModel<Connections> modelConnections = new DefaultComboBoxModel<Connections>(new Vector<Connections>(listConnections));
 	cbConnections = new JComboBox<Connections>(modelConnections);
 	cbConnections.setSelectedIndex(-1);
-	cbConnections.addActionListener(new ActionListener()
-	{
-
-	    @Override
-	    public void actionPerformed(ActionEvent e)
-	    {
-		Connections conn = (Connections) cbConnections.getSelectedItem();
-		System.out.println(conn.getName() + " connecting...");
-		DBUtil.setCurrent(conn);
-		System.out.println(conn.getName() + " connected.");
-		mLog.setEnabled(true);
-		mSearch.setEnabled(true);
-		mWindow.setEnabled(true);
-	    }
-	});
+	cbConnections.addActionListener(new ChangeConnect());
 
 	btnExit = new JButton(new LoadResources().getIcon(EnvIcons.EXIT_APP));
 	btnExit.setToolTipText("Exit");

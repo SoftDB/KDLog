@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- OFF FATAL ERROR WARN INFO DEBUG TRACE ALL -->
+
+
+<Configuration status="error">
+    <Appenders>
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout
+                pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{36} - %msg%n" />
+        </Console>
+        <File name="LogToFile" fileName="kdlog.log">
+            <PatternLayout
+                pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{36} - %msg%n" />
+        </File>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.softdb.kdlog.app.DBUtil" level="info" additivity="false">
+            <AppenderRef ref="LogToFile"/>
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+        <Logger name="com.softdb.kdlog.query.AbstractQuery" level="info" additivity="false">
+            <AppenderRef ref="LogToFile"/>
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+        <Logger name="com.softdb.kdlog.action.ChangeConnect" level="info" additivity="false">
+            <AppenderRef ref="LogToFile"/>
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+
+        <Logger name="com.softdb.kdlog.app.App" level="info" additivity="false">
+            <AppenderRef ref="LogToFile"/>
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+        <Logger name="com.softdb.kdlog.app.Config" level="info" additivity="false">
+        <AppenderRef ref="LogToFile"/>
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+        <Root level="error">
+            <AppenderRef ref="LogToFile"/>
+            <AppenderRef ref="LogToConsole"/>
+        </Root>
+    </Loggers>
+</Configuration>
+ 

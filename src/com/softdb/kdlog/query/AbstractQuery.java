@@ -1,19 +1,22 @@
 package com.softdb.kdlog.query;
 
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.softdb.bojava.db.ModelTableQuery;
 import com.softdb.kdlog.app.DBUtil;
 import com.softdb.kdlog.types.Columns;
-import com.softdb.kdlog.types.ModelTableQuery;
 import com.softdb.kdlog.types.QueryParams;
 
 public abstract class AbstractQuery
 {
     private String sql;
-    protected String err;
+
+    private static final Logger logger = LogManager.getLogger(AbstractQuery.class);
 
     public String getSQL()
     {
@@ -23,6 +26,7 @@ public abstract class AbstractQuery
     public void setSQL(String sql)
     {
 	this.sql = sql;
+	logger.info(sql);
     }
 
     public List<Columns> getColumns(String owner, String table)
@@ -41,14 +45,9 @@ public abstract class AbstractQuery
 	    }
 
 	    return cols;
-	} catch (ClassNotFoundException e)
+	} catch (Exception e)
 	{
-	    // TODO Auto-generated catch block
-	    e.printStackTrace();
-	} catch (SQLException e)
-	{
-	    // TODO Auto-generated catch block
-	    e.printStackTrace();
+	    logger.error(e);
 	}
 	return cols;
     }
@@ -82,15 +81,11 @@ public abstract class AbstractQuery
 	StringBuffer sb = new StringBuffer();
 
 	sb.append(bulidSQLColumns(params, tableName));
-	/*
-	 * if (tableName.equals("al.log_afh")) sb.append(
-	 * "SELECT log_id,TO_CHAR(log_time, 'YYYY-MM-DD HH24:MI:SSxFF') as log_time,log_text,log_source,log_params,log_statement,log_statement_long "
-	 * );
-	 */
+
 	if (params.getRange().equals("REQUESTID"))
-	    if (tableName.equals("dr.log_procedure_text"))
+	    if (tableName.equals("DR.LOG_PROCEDURE_TEXT"))
 	    {
-		sb.append(" procedure_audit_id in ");
+		sb.append(" WHERE procedure_audit_id in ");
 		sb.append("(SELECT lp.procedure_audit_id ");
 		sb.append("FROM dr.log_job lj, ");
 		sb.append("dr.log_procedure lp ");
@@ -150,7 +145,7 @@ public abstract class AbstractQuery
 
 	if (tableName.equals("all_source"))
 	    sb.append(" ORDER BY name,line");
-	
+
 	return sb.toString();
     }
 
@@ -158,17 +153,17 @@ public abstract class AbstractQuery
     {
 	try
 	{
+	    ModelTableQuery modelTabelQuery;
 	    ResultSet rs = DBUtil.dbExecuteQuery(sql);
-	    ModelTableQuery modelTabelQuery = new ModelTableQuery(rs);
-	    err = "";
-	    
-	    return modelTabelQuery;
-	} catch (Exception e)
+	    if (rs != null)
+	    {
+		modelTabelQuery = new ModelTableQuery(rs);
+		return modelTabelQuery;
+	    } else
+		return null;
+	} catch (Exception exc)
 	{
-	    err = e.getMessage();
-	    e.printStackTrace();
+	    return null;
 	}
-
-	return null;
     }
 }
